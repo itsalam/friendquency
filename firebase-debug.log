@@ -1,0 +1,26 @@
+[debug] [2023-07-19T01:25:17.063Z] ----------------------------------------------------------------------
+[debug] [2023-07-19T01:25:17.065Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vince\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-07-19T01:25:17.066Z] CLI Version:   12.1.0
+[debug] [2023-07-19T01:25:17.066Z] Platform:      win32
+[debug] [2023-07-19T01:25:17.067Z] Node Version:  v18.13.0
+[debug] [2023-07-19T01:25:17.068Z] Time:          Tue Jul 18 2023 18:25:17 GMT-0700 (Pacific Daylight Saving Time)
+[debug] [2023-07-19T01:25:17.068Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-19T01:25:17.173Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-19T01:25:17.173Z] > authorizing via signed-in user (vincentthanhlam@gmail.com)
+[debug] [2023-07-19T01:25:17.174Z] [iam] checking project friendquency-66ce6 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-07-19T01:25:17.177Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendquency-66ce6:testIamPermissions [none]
+[debug] [2023-07-19T01:25:17.177Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendquency-66ce6:testIamPermissions x-goog-quota-user=projects/friendquency-66ce6
+[debug] [2023-07-19T01:25:17.178Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendquency-66ce6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-07-19T01:25:17.347Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendquency-66ce6:testIamPermissions 200
+[debug] [2023-07-19T01:25:17.347Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/friendquency-66ce6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-07-19T01:25:17.348Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/friendquency-66ce6/serviceAccounts/friendquency-66ce6@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-07-19T01:25:17.349Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/friendquency-66ce6/serviceAccounts/friendquency-66ce6@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-07-19T01:25:17.433Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/friendquency-66ce6/serviceAccounts/friendquency-66ce6@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-07-19T01:25:17.433Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/friendquency-66ce6/serviceAccounts/friendquency-66ce6@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-07-19T01:25:17.435Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/friendquency-66ce6 [none]
+[debug] [2023-07-19T01:25:17.591Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/friendquency-66ce6 200
+[debug] [2023-07-19T01:25:17.591Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/friendquency-66ce6 {"projectId":"friendquency-66ce6","projectNumber":"744515610276","displayName":"friendquency","name":"projects/friendquency-66ce6","resources":{"hostingSite":"friendquency-66ce6","realtimeDatabaseInstance":"friendquency-66ce6-default-rtdb"},"state":"ACTIVE","etag":"1_31250062-737e-4366-b6e2-97676255bd1b"}
+[debug] [2023-07-19T01:25:17.592Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/friendquency-66ce6 [none]
+[debug] [2023-07-19T01:25:17.756Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/friendquency-66ce6 200
+[debug] [2023-07-19T01:25:17.757Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/friendquency-66ce6 {"projectId":"friendquency-66ce6","projectNumber":"744515610276","displayName":"friendquency","name":"projects/friendquency-66ce6","resources":{"hostingSite":"friendquency-66ce6","realtimeDatabaseInstance":"friendquency-66ce6-default-rtdb"},"state":"ACTIVE","etag":"1_31250062-737e-4366-b6e2-97676255bd1b"}
