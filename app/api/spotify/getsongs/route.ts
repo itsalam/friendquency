@@ -1,6 +1,5 @@
-// Authorization token that must have been created previously. See : https://developer.spotify.com/documentation/web-api/concepts/authorization
-import * as logger from "firebase-functions/logger";
-import { onRequest } from "firebase-functions/v2/https";
+import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 
 /** Fetches the Spotify Web API
  * Adds two numbers together.
@@ -40,10 +39,18 @@ async function getTopTracks(token: string) {
   ).items;
 }
 
-export const topTracks = onRequest(async (request, response) => {
-  const body = JSON.parse(request.body);
-
-  logger.info("Hello logs!", { structuredData: true });
+export async function GET(request: NextRequest) {
+  const body = await request.json();
   const topTracks = await getTopTracks(body.token);
-  response.send(topTracks);
-});
+  return NextResponse.json(
+    {
+      body: topTracks,
+      path: request.nextUrl.pathname,
+      query: request.nextUrl.search,
+      cookies: request.cookies.getAll(),
+    },
+    {
+      status: 200,
+    }
+  );
+}
