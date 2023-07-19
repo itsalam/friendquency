@@ -18,6 +18,6 @@ export const getStaticProps: GetStaticProps<{
 
 export default function Songs({ repo }: InferGetStaticPropsType<typeof getStaticProps>) {
     console.log(repo);
-    return <div>{repo}</div>
+    return <div>{JSON.stringify(repo)}</div>
 }
 
